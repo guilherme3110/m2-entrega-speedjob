@@ -75,3 +75,68 @@ const backEndJobs = [
         modality: ["Full Time","Remote"]
     },
 ]
+
+
+ function renderListFrontEnd(frontEndJobs){
+    const secaoCard = document.querySelector('.frontEnd__container')
+        for(let i = 0; i < frontEndJobs.length; i++) {
+        
+        liCard = document.createElement('li')
+
+        let title = document.createElement('h2')
+        title.classList.add = frontEndJobs[i].title
+        title.innerHTML = frontEndJobs[i].title
+
+        let p = document.createElement('p')
+        p.classList.add = frontEndJobs[i].descrription
+        p.innerHTML = frontEndJobs[i].descrription
+
+        let span = document.createElement('span')
+        span.classList.add = frontEndJobs[i].modality
+        span.innerHTML = frontEndJobs[i].modality
+
+
+        secaoCard.appendChild(liCard)
+        liCard.appendChild(title)
+        liCard.appendChild(p)
+        liCard.appendChild(span)
+    }
+ }
+
+ renderListFrontEnd(frontEndJobs)
+
+  function renderListBackEnd(backEndJobs){
+    const secaoCard = document.querySelector('.backEnd__container')
+        for(let i = 0; i < backEndJobs.length; i++){
+        
+        liCard = document.createElement('li')
+
+        let title = document.createElement('h2')
+        title.classList.add = backEndJobs[i].title
+        title.innerHTML = backEndJobs[i].title
+
+        let p = document.createElement('p')
+        p.classList.add = backEndJobs[i].descrription
+        p.innerHTML = backEndJobs[i].descrription
+
+        let span = document.createElement('span')
+        span.classList.add = backEndJobs[i].modality
+        span.innerHTML = backEndJobs[i].modality
+
+
+        secaoCard.appendChild(liCard)
+        liCard.appendChild(title)
+        liCard.appendChild(p)
+        liCard.appendChild(span)
+        }
+  }
+
+  renderListBackEnd(backEndJobs)
+ 
+
+
+
+
+
+
+
